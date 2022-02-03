@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: saws-eureka-server
+    
+server:
+  port: 8081
