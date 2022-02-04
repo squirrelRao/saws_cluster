@@ -1,7 +1,8 @@
 spring:
   application:
     name: saws-eureka-server
-
+server:
+  port: 7900
 eureka:
   server:
     # 是否启动自我保护模式, false = 不启动  true = 启动
@@ -14,12 +15,12 @@ eureka:
     fetch-registry: false
     #设置服务注册中心的URL，用于client和server端交流
     instance:
+      hostname: saws1
+      prefer-ip-address: true
       #表示eureka client间隔多久去拉取服务注册信息
       lease-renewal-interval-in-seconds: 1
       # 表示eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间
       lease-expiration-duration-in-seconds: 2
     server-url:
-      defaultZone: http://localhost:7900/eureka/
+      defaultZone: http://saws1:7900/eureka/
 
-server:
-  port: 7900
