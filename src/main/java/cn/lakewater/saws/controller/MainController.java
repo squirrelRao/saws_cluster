@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-    @GetMapping(value = "/hello")
+    @GetMapping(value = "/hello2")
     public String hello(){
         log.info("hello");
         return "hello eureka!";
