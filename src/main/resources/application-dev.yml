@@ -1,6 +1,10 @@
 spring:
   application:
     name: saws-eureka-server1
+  boot:
+      admin:
+        client:
+          url: http://localhost:9091
 server:
   port: 7900
 eureka:
@@ -22,4 +26,4 @@ eureka:
       # 表示eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间
       lease-expiration-duration-in-seconds: 2
     server-url:
-      defaultZone: http://localhost:7900/eureka/
+      defaultZone: http://saws1:7900/eureka/
